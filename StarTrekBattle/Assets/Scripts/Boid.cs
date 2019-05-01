@@ -19,9 +19,6 @@ public class Boid : MonoBehaviour
     public float maxSpeed = 5.0f;
     public float maxForce = 10.0f;
 
-    public Vector3 heading;
-    public GameObject target2;
-
 
     // Use this for initialization
     void Start()
@@ -94,7 +91,6 @@ public class Boid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        heading = GetComponent<Seek>().target - transform.position;
         force = Calculate();
         Vector3 newAcceleration = force / mass;
         acceleration = Vector3.Lerp(acceleration, newAcceleration, Time.deltaTime);
@@ -102,10 +98,6 @@ public class Boid : MonoBehaviour
 
         velocity = Vector3.ClampMagnitude(velocity, maxSpeed);
 
-        if (heading.sqrMagnitude < 20 * 20)
-        {
-            GetComponent<Seek>().targetGameObject = target2;
-        }
 
         if (velocity.magnitude > float.Epsilon)
         {

@@ -9,6 +9,9 @@ public class Seek : SteeringBehaviour
     public GameObject targetGameObject = null;
     public Vector3 target = Vector3.zero;
 
+    public Vector3 heading;
+    public GameObject target2;
+
     public void OnDrawGizmos()
     {
         if (isActiveAndEnabled && Application.isPlaying)
@@ -29,9 +32,15 @@ public class Seek : SteeringBehaviour
 
     public void Update()
     {
+        heading = target - transform.position;
         if (targetGameObject != null)
         {
             target = targetGameObject.transform.position;
+        }
+
+        if (heading.sqrMagnitude < 20 * 20)
+        {
+            GetComponent<Seek>().targetGameObject = target2;
         }
     }
 }

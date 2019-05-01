@@ -12,7 +12,6 @@ public class FadeOutFadeIn : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         GetComponent<CanvasGroup>().alpha = 0.99f;
-
     }
 	
 	// Update is called once per frame
@@ -24,11 +23,11 @@ public class FadeOutFadeIn : MonoBehaviour {
     {
         if(fading==false)
         {
-            GetComponent<CanvasGroup>().alpha++;
+            GetComponent<CanvasGroup>().alpha+= 0.01f;
         }
         if(fading==true)
         {
-            GetComponent<CanvasGroup>().alpha += - 0.01f ;
+            GetComponent<CanvasGroup>().alpha += -0.005f ;
         }
 
         if(GetComponent<CanvasGroup>().alpha==1)
