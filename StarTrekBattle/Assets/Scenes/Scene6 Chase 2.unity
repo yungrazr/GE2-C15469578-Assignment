@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.23311904, g: 0.23636517, b: 0.27294564, a: 1}
+  m_IndirectSpecularColor: {r: 0.23151067, g: 0.23472849, b: 0.2710881, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -177,7 +177,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &29140728
 Prefab:
@@ -1646,6 +1646,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 494976, guid: fa49e460baf435b4780da7196c2ab473,
     type: 2}
   m_PrefabInternal: {fileID: 62891279}
+--- !u!1 &614639770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 614639771}
+  m_Layer: 0
+  m_Name: Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &614639771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 614639770}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: -216.80005, y: 14.87, z: 4.339958}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &632287517 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 469044, guid: 04d0bf4be9447154188d86f6e3b8dce9,
@@ -1666,7 +1694,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &639712124
 Transform:
   m_ObjectHideFlags: 0
@@ -1754,8 +1782,8 @@ TrailRenderer:
       ctime6: 0
       ctime7: 0
       atime0: 0
-      atime1: 39707
-      atime2: 0
+      atime1: 33153
+      atime2: 39707
       atime3: 0
       atime4: 0
       atime5: 0
@@ -1763,7 +1791,7 @@ TrailRenderer:
       atime7: 0
       m_Mode: 0
       m_NumColorKeys: 2
-      m_NumAlphaKeys: 2
+      m_NumAlphaKeys: 3
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
@@ -2603,7 +2631,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 146.12, y: 269.26, z: -15.5}
 --- !u!4 &1122435077 stripped
 Transform:
@@ -3378,8 +3406,11 @@ MonoBehaviour:
   weight: 1
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
-  targetGameObject: {fileID: 0}
+  targetGameObject: {fileID: 614639770}
   target: {x: 0, y: 0, z: 0}
+  heading: {x: 0, y: 0, z: 0}
+  target2: {fileID: 0}
+  scene: 
 --- !u!114 &1457372950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3397,15 +3428,15 @@ MonoBehaviour:
   mass: 1
   damping: 0.01
   banking: 0.1
-  maxSpeed: 200
-  maxForce: 200
+  maxSpeed: 20
+  maxForce: 20
 --- !u!4 &1457372951
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1457372948}
-  m_LocalRotation: {x: -0, y: 0.76082397, z: -0, w: -0.6489584}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
   m_LocalPosition: {x: 48.4, y: 14.87, z: 74.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3413,8 +3444,8 @@ Transform:
   - {fileID: 1662156791}
   - {fileID: 639712124}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 260.926, z: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!1001 &1488586676
 Prefab:
   m_ObjectHideFlags: 0
@@ -3497,6 +3528,8 @@ GameObject:
   - component: {fileID: 1512537883}
   - component: {fileID: 1512537882}
   - component: {fileID: 1512537885}
+  - component: {fileID: 1512537886}
+  - component: {fileID: 1512537887}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3557,13 +3590,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1512537881}
-  m_LocalRotation: {x: -0.05064869, y: 0.70529056, z: -0.044344194, w: -0.70571494}
-  m_LocalPosition: {x: 91.1, y: 24.6, z: 72.3}
+  m_LocalRotation: {x: -0.047496915, y: 0.7055098, z: -0.047496915, w: -0.7055098}
+  m_LocalPosition: {x: 81.50001, y: 23.1, z: 74.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 7.7030005, y: 270, z: -0.512}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 7.7030005, y: 270, z: 0}
 --- !u!114 &1512537885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3576,6 +3609,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 8f547cdf8d380834bbfc392c148b85a9, type: 2}
+--- !u!114 &1512537886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1512537881}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 638482fc1aaf9454889306fc80b0639f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1457372948}
+--- !u!114 &1512537887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1512537881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 300bb11e72ba3f24da761d0f406cb3af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1519513752 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446090, guid: 84cc3cd234dfc9d4d9d2e92c0eb0af75,
@@ -3826,7 +3882,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1662156791
 Transform:
   m_ObjectHideFlags: 0
@@ -3914,8 +3970,8 @@ TrailRenderer:
       ctime6: 0
       ctime7: 0
       atime0: 0
-      atime1: 39707
-      atime2: 0
+      atime1: 33153
+      atime2: 39707
       atime3: 0
       atime4: 0
       atime5: 0
@@ -3923,7 +3979,7 @@ TrailRenderer:
       atime7: 0
       m_Mode: 0
       m_NumColorKeys: 2
-      m_NumAlphaKeys: 2
+      m_NumAlphaKeys: 3
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
@@ -4342,7 +4398,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 14.15, y: 269.26, z: -15.5}
 --- !u!1001 &1817497571
 Prefab:

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Seek : SteeringBehaviour
 {
@@ -11,6 +13,7 @@ public class Seek : SteeringBehaviour
 
     public Vector3 heading;
     public GameObject target2;
+    public string scene;
 
     public void OnDrawGizmos()
     {
@@ -38,9 +41,14 @@ public class Seek : SteeringBehaviour
             target = targetGameObject.transform.position;
         }
 
-        if (heading.sqrMagnitude < 20 * 20)
+        if (heading.sqrMagnitude < 20 * 20 && target2 != null)
         {
             GetComponent<Seek>().targetGameObject = target2;
+        }
+
+        if (heading.sqrMagnitude < 5 && scene != null)
+        {
+            SceneManager.LoadScene(scene);
         }
     }
 }
