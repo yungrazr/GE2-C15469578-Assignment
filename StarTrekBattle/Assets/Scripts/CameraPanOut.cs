@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CameraPanOut : MonoBehaviour {
 
+    public float slow=1;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -11,6 +13,6 @@ public class CameraPanOut : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.position += -transform.forward * Time.deltaTime;
+        transform.position += -transform.forward * Time.deltaTime/ slow;
     }
 }

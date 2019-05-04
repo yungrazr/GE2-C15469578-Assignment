@@ -48,6 +48,7 @@ public class Seek : SteeringBehaviour
 
         if (heading.sqrMagnitude < 5 && scene != null)
         {
+            GetComponent<AudioSource>().Stop();
             SceneManager.LoadScene(scene);
         }
     }
