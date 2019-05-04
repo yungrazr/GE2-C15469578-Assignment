@@ -13,7 +13,7 @@ public class Seek : SteeringBehaviour
 
     public Vector3 heading;
     public GameObject target2;
-    public string scene;
+    public string scene = null;
 
     public void OnDrawGizmos()
     {
