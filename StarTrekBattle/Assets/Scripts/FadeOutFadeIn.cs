@@ -25,6 +25,7 @@ public class FadeOutFadeIn : MonoBehaviour {
         {
             GetComponent<CanvasGroup>().alpha+= 0.01f;
         }
+
         if(fading==true)
         {
             GetComponent<CanvasGroup>().alpha += -0.005f ;

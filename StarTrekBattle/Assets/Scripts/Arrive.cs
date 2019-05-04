@@ -25,7 +25,7 @@ public class Arrive : SteeringBehaviour
             targetPosition = targetGameObject.transform.position;
         }
 
-        Debug.Log(heading.sqrMagnitude);
+        //Debug.Log(heading.sqrMagnitude);
         if (heading.sqrMagnitude < 200)
         {
             boid.acceleration = Vector3.Lerp(boid.acceleration, Vector3.zero, Time.deltaTime);
