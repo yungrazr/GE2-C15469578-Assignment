@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.187774, g: 0.1948882, b: 0.22642091, a: 1}
+  m_IndirectSpecularColor: {r: 0.23248589, g: 0.23576665, b: 0.27227688, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -128,7 +128,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &703672908
 Transform:
   m_ObjectHideFlags: 0
@@ -136,7 +136,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 703672907}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.87, y: -0.9, z: -7.76}
+  m_LocalPosition: {x: -1.87, y: -0.9, z: -7.67}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 2107198209}
@@ -178,7 +178,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.5
+  m_Time: 5
   m_Parameters:
     serializedVersion: 2
     widthMultiplier: 1
@@ -216,7 +216,7 @@ TrailRenderer:
       ctime6: 0
       ctime7: 0
       atime0: 0
-      atime1: 39707
+      atime1: 38165
       atime2: 0
       atime3: 0
       atime4: 0
@@ -245,6 +245,7 @@ GameObject:
   - component: {fileID: 819089768}
   - component: {fileID: 819089767}
   - component: {fileID: 819089770}
+  - component: {fileID: 819089771}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -281,7 +282,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 76.5
+  field of view: 75
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -305,12 +306,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 819089766}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &819089770
 MonoBehaviour:
@@ -324,6 +325,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 8f547cdf8d380834bbfc392c148b85a9, type: 2}
+--- !u!114 &819089771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 819089766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 300bb11e72ba3f24da761d0f406cb3af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &874706298
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,7 +351,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &874706299
 Transform:
   m_ObjectHideFlags: 0
@@ -347,7 +359,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 874706298}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.43, y: -0.8999939, z: -7.7599945}
+  m_LocalPosition: {x: 1.43, y: -0.8999939, z: -7.6699944}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 2107198209}
@@ -389,7 +401,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.5
+  m_Time: 5
   m_Parameters:
     serializedVersion: 2
     widthMultiplier: 1
@@ -427,7 +439,7 @@ TrailRenderer:
       ctime6: 0
       ctime7: 0
       atime0: 0
-      atime1: 39707
+      atime1: 38165
       atime2: 0
       atime3: 0
       atime4: 0
@@ -509,7 +521,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &2107198206
 GameObject:
@@ -536,16 +548,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2107198206}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd8ba8b47a3e14f41942a4802d1b6ff9, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f0fa590c1090a644aa727290d1a3e23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 1
-  force: {x: 0, y: 0, z: 0}
-  boid: {fileID: 0}
-  targetGameObject: {fileID: 0}
-  target: {x: 0, y: 0, z: 0}
-  heading: {x: 0, y: 0, z: 0}
-  target2: {fileID: 0}
+  maincamera: {fileID: 819089768}
 --- !u!114 &2107198208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -572,7 +578,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2107198206}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.9, y: 0.6, z: 8}
+  m_LocalPosition: {x: -4.9, y: 0.6, z: 3.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2145489303}
