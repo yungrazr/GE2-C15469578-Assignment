@@ -46,7 +46,7 @@ public class Seek : SteeringBehaviour
             GetComponent<Seek>().targetGameObject = target2;
         }
 
-        if (heading.sqrMagnitude < 5 && scene != null)
+        if (heading.sqrMagnitude < 5 && !String.IsNullOrEmpty(scene))
         {
             GetComponent<AudioSource>().Stop();
             SceneManager.LoadScene(scene);

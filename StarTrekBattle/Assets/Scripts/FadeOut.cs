@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class FadeOut : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public float fadeOutSpeed = 0.002f;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        GetComponent<CanvasGroup>().alpha += -0.002f;
+        GetComponent<CanvasGroup>().alpha += -fadeOutSpeed;
     }
 }

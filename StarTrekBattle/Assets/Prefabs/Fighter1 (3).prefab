@@ -8851,8 +8851,8 @@ MonoBehaviour:
   mass: 1
   damping: 0.01
   banking: 0.1
-  maxSpeed: 20
-  maxForce: 20
+  maxSpeed: 40
+  maxForce: 40
 --- !u!114 &114405094243669270
 MonoBehaviour:
   m_ObjectHideFlags: 1
