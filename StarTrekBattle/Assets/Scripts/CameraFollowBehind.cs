@@ -5,15 +5,14 @@ using UnityEngine;
 public class CameraFollowBehind : MonoBehaviour {
 
     public GameObject target;
-    Vector3 offset;
+    //Vector3 offset;
     Vector3 newPos;
     Quaternion newRot;
     public bool front;
 
     // Use this for initialization
     void Start () {
-        offset = transform.position;
-
+        //offset = transform.position;
     }
 	
 	// Update is called once per frame
