@@ -40,8 +40,11 @@ public class CameraFollowBehind : MonoBehaviour {
     void frontCamera()
     {
         newPos = target.transform.position + target.transform.forward * 50;
-        transform.position = newPos;
+        transform.position = newPos + transform.up * 5;
 
+        newRot = transform.rotation;
+        newRot.z = target.transform.rotation.z;
+        transform.rotation = newRot;
         transform.LookAt(target.transform);
     }
 
