@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.21874377, g: 0.22192493, b: 0.25655344, a: 1}
+  m_IndirectSpecularColor: {r: 0.17237517, g: 0.17954195, b: 0.20933536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2892,6 +2892,7 @@ GameObject:
   - component: {fileID: 330244535}
   - component: {fileID: 330244534}
   - component: {fileID: 330244533}
+  - component: {fileID: 330244537}
   - component: {fileID: 330244536}
   m_Layer: 0
   m_Name: Enterprise
@@ -2918,7 +2919,7 @@ MonoBehaviour:
   target: {x: 0, y: 0, z: 0}
   heading: {x: 0, y: 0, z: 0}
   target2: {fileID: 0}
-  scene: Scene6 Chase 2
+  scene: 
 --- !u!114 &330244534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2965,7 +2966,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 03afc1662cd350441be497c125a81f84, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.61
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3049,6 +3050,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &330244537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 330244532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e8fe3a20d531f54aab8b34c20e7ed5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1752277620}
+  heading: {x: 0, y: 0, z: 0}
+  canvas: {fileID: 1910794657}
+  scene: Scene6 Chase 2
 --- !u!1001 &333314019
 Prefab:
   m_ObjectHideFlags: 0
@@ -3119,6 +3135,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 336216714}
+  - component: {fileID: 336216715}
   m_Layer: 0
   m_Name: Asteroids
   m_TagString: Untagged
@@ -3197,6 +3214,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &336216715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 336216713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94be8edff889a0845a11beb02b397ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tumble: 0.3
 --- !u!4 &338878000 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 494976, guid: fa49e460baf435b4780da7196c2ab473,
@@ -4355,7 +4384,6 @@ GameObject:
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
   - component: {fileID: 534669906}
-  - component: {fileID: 534669907}
   - component: {fileID: 534669908}
   - component: {fileID: 534669909}
   - component: {fileID: 534669910}
@@ -4438,18 +4466,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 8f547cdf8d380834bbfc392c148b85a9, type: 2}
---- !u!114 &534669907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 534669902}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 231b0ba470558ed41bd311e23cf3fb9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Target: {fileID: 330244532}
 --- !u!114 &534669908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7540,6 +7556,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1097204239}
+  - component: {fileID: 1097204240}
   m_Layer: 0
   m_Name: Asteroids (1)
   m_TagString: Untagged
@@ -7628,6 +7645,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1097204240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1097204238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94be8edff889a0845a11beb02b397ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tumble: 0.3
 --- !u!1001 &1100460553
 Prefab:
   m_ObjectHideFlags: 0
@@ -11041,7 +11070,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1910794650}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdf37da6105f1a14fa707d37310a8fd5, type: 3}
   m_Name: 
@@ -11054,7 +11083,7 @@ CanvasGroup:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1910794650}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0

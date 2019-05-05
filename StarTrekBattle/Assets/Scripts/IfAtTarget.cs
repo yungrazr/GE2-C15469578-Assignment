@@ -7,7 +7,7 @@ public class IfAtTarget : MonoBehaviour {
 
     public GameObject target;
     public Vector3 heading;
-    public Canvas canvas;
+    public Canvas canvas=null;
 
     public string scene;
 
@@ -19,21 +19,30 @@ public class IfAtTarget : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         heading = target.transform.position - transform.position;
-        Debug.Log(heading.sqrMagnitude);
-        if (heading.sqrMagnitude < 500)
-        {
-            fade = true;
-        }
+        //Debug.Log(heading.sqrMagnitude);
 
-        if(fade)
-        {
-            canvas.GetComponent<CanvasGroup>().alpha += 0.01f;
-            GetComponent<AudioSource>().volume += -0.001f;
-        }
-
-        if(canvas.GetComponent<CanvasGroup>().alpha==1)
+        if(heading.sqrMagnitude < 500 && canvas == null)
         {
             SceneManager.LoadScene(scene);
+        }
+
+        if(canvas!=null)
+        {
+            if (heading.sqrMagnitude < 500)
+            {
+                fade = true;
+            }
+
+            if (fade)
+            {
+                canvas.GetComponent<CanvasGroup>().alpha += 0.01f;
+                GetComponent<AudioSource>().volume += -0.01f;
+            }
+
+            if (canvas.GetComponent<CanvasGroup>().alpha == 1)
+            {
+                SceneManager.LoadScene(scene);
+            }
         }
     }
 }

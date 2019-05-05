@@ -6,6 +6,7 @@ public class FadeOut : MonoBehaviour {
 
     public float fadeOutSpeed = 0.002f;
 
+
     // Use this for initialization
     void Start () {
 		
