@@ -11,7 +11,6 @@ public class ExplodeOnCollision : MonoBehaviour
         Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         wander.shipsAlive--;
         Destroy(gameObject);
-
     }
 
 }
