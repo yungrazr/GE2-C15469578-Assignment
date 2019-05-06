@@ -4,22 +4,35 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
 
+    public GameObject parent;
     public GameObject target;
+    public GameObject explosionPrefab;
 
     // Use this for initialization
     void Start () {
         transform.LookAt(target.transform);
-        Destroy(gameObject, 2);
+        Destroy(gameObject, 4);
     }
 	
 	// Update is called once per frame
 	void Update () {
-        transform.position += transform.forward/2;
+        transform.position += transform.forward/1.5f;
 	}
 
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider col)
     {
-        Destroy(gameObject);
+        if(col.gameObject==parent)
+        {
+
+        }
+        else
+        {
+            if(explosionPrefab!=null)
+            {
+                Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            }
+            Destroy(gameObject);
+        }
     }
 }

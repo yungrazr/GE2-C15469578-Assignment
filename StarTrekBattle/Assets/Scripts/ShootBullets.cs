@@ -12,7 +12,6 @@ public class ShootBullets : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        pos = transform.position;
         StartCoroutine(Shoot());
 	}
 	
@@ -24,14 +23,17 @@ public class ShootBullets : MonoBehaviour {
 
     IEnumerator Shoot()
     {
-        while(target!=null)
+        while (target!=null)
         {
+            pos = transform.position;
             GameObject bullet = Instantiate(bulletPrefab, pos, Quaternion.identity);
             bullet.GetComponent<Bullet>().target = target;
-            yield return new WaitForSeconds(0.2f);
+            bullet.GetComponent<Bullet>().parent = gameObject;
+            yield return new WaitForSeconds(0.3f);
             bullet = Instantiate(bulletPrefab, pos, Quaternion.identity);
             bullet.GetComponent<Bullet>().target = target;
-            var delay = Random.Range(1.0f, 2.0f);
+            bullet.GetComponent<Bullet>().parent = gameObject;
+            var delay = Random.Range(1.5f, 3.0f);
             yield return new WaitForSeconds(delay);
         }
 

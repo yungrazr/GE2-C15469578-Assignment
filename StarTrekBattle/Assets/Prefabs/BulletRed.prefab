@@ -204,4 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad7d98ac99a7b44893cb7921c8267c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parent: {fileID: 0}
   target: {fileID: 0}
+  explosionPrefab: {fileID: 1000010608846784, guid: 37c7905c0d8c0b9458a1eb617bd0090c,
+    type: 2}

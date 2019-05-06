@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShipHealthExplode : MonoBehaviour {
 
-    int health = 3;
+    int health = 4;
     public GameObject explosionPrefab;
 
     // Use this for initialization
