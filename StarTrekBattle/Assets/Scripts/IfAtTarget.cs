@@ -28,7 +28,7 @@ public class IfAtTarget : MonoBehaviour {
 
         if(canvas!=null)
         {
-            if (heading.sqrMagnitude < 500)
+            if (heading.sqrMagnitude < 1000)
             {
                 fade = true;
             }

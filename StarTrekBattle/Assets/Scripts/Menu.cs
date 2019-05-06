@@ -25,6 +25,14 @@ public class Menu : MonoBehaviour {
     void Start () {
         PickScene.onClick.AddListener(Pickscene);
         PlayAll.onClick.AddListener(Playall);
+        Scene1.onClick.AddListener(delegate { ChangeScene("Scene1 Intro"); });
+        Scene2.onClick.AddListener(delegate { ChangeScene("Scene2 Encounter"); });
+        Scene3.onClick.AddListener(delegate { ChangeScene("Scene3 Battle"); });
+        Scene4.onClick.AddListener(delegate { ChangeScene("Scene4 Mothership"); });
+        Scene5.onClick.AddListener(delegate { ChangeScene("Scene5 Chase"); });
+        Scene6.onClick.AddListener(delegate { ChangeScene("Scene6 Chase 2"); });
+        Scene7.onClick.AddListener(delegate { ChangeScene("Scene7 Escape"); });
+
     }
 	
 	// Update is called once per frame
@@ -41,5 +49,10 @@ public class Menu : MonoBehaviour {
     {
         active = !active;
         SceneButtons.SetActive(active);
+    }
+
+    void ChangeScene(string scene)
+    {
+        SceneManager.LoadScene(scene);
     }
 }

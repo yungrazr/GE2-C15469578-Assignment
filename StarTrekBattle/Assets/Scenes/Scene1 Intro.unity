@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.22927186, g: 0.23238721, b: 0.26841798, a: 1}
+  m_IndirectSpecularColor: {r: 0.22720739, g: 0.23028094, b: 0.26601735, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -245,6 +245,7 @@ GameObject:
   - component: {fileID: 125323882}
   - component: {fileID: 125323883}
   - component: {fileID: 125323884}
+  - component: {fileID: 125323885}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -345,6 +346,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 300bb11e72ba3f24da761d0f406cb3af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &125323885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 125323878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7e57047147cbc24dbcc2fa31b71e555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &137057826
@@ -629,6 +641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fading: 1
   scene: Scene2 Encounter
+  fadeInSpeed: 0.01
 --- !u!225 &537119478
 CanvasGroup:
   m_ObjectHideFlags: 0
