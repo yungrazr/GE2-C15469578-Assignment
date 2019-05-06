@@ -23,17 +23,21 @@ public class ShootBullets : MonoBehaviour {
 
     IEnumerator Shoot()
     {
+        yield return new WaitForSeconds(3);
         while (target!=null)
         {
+            var delay = Random.Range(0.0f, 0.5f);
+            yield return new WaitForSeconds(delay);
             pos = transform.position;
             GameObject bullet = Instantiate(bulletPrefab, pos, Quaternion.identity);
             bullet.GetComponent<Bullet>().target = target;
             bullet.GetComponent<Bullet>().parent = gameObject;
             yield return new WaitForSeconds(0.3f);
+            pos = transform.position;
             bullet = Instantiate(bulletPrefab, pos, Quaternion.identity);
             bullet.GetComponent<Bullet>().target = target;
             bullet.GetComponent<Bullet>().parent = gameObject;
-            var delay = Random.Range(1.5f, 3.0f);
+            delay = Random.Range(1.5f, 2.0f);
             yield return new WaitForSeconds(delay);
         }
 

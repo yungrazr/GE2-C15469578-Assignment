@@ -7,6 +7,8 @@ public class RandomTarget : MonoBehaviour {
     public GameObject[] targetList;
     public GameObject target;
 
+    public FadeOutFadeIn fade;
+
 
 	// Use this for initialization
 	void Start () {
@@ -19,7 +21,9 @@ public class RandomTarget : MonoBehaviour {
         {
             NewTarget();
         }
-	}
+
+        checkIfNoEnemies();
+    }
 
     void NewTarget()
     {
@@ -34,4 +38,23 @@ public class RandomTarget : MonoBehaviour {
         }
 
     }
+
+    void checkIfNoEnemies()
+    {
+        var dead = 0;
+        for (int i = 0; i< targetList.Length; i++)
+        {
+            if(targetList[i]==null)
+            {
+                dead++;
+            }
+        }
+
+        if(dead>=5)
+        {
+            fade.fading = false;
+        }
+
+    }
+
 }
