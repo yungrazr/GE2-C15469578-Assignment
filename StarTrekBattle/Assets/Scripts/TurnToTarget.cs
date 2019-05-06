@@ -7,6 +7,8 @@ public class TurnToTarget : MonoBehaviour {
     public GameObject target;
     Vector3 targetPos;
 
+    public GameObject voice;
+
     public SpawnShips spawn;
     public float slowRot=3;
     public float slowMovement=5;
@@ -22,6 +24,10 @@ public class TurnToTarget : MonoBehaviour {
 	void Update () {
         if(spawn.spawned ==true)
         {
+            if(voice!=null)
+            {
+                voice.SetActive(true);
+            }
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(targetPos), Time.deltaTime / slowRot);
             transform.position += transform.forward/ slowMovement;
         }

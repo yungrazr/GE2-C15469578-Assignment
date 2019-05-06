@@ -10,6 +10,7 @@ public class Wander : SteeringBehaviour
 {
     public GameObject targetGameObject = null;
     public Vector3 target = Vector3.zero;
+    public GameObject voice;
 
     public Vector3 heading;
     public GameObject target1;
@@ -74,6 +75,7 @@ public class Wander : SteeringBehaviour
         else
         {
             targetGameObject = target4;
+            voice.SetActive(true);
         }
 
 

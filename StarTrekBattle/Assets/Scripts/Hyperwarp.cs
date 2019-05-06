@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Hyperwarp : MonoBehaviour {
 
@@ -8,6 +10,9 @@ public class Hyperwarp : MonoBehaviour {
     Vector3 offset;
     public GameObject target;
     Vector3 heading;
+
+    public GameObject fade;
+    bool fading = false;
  
 
 	// Use this for initialization
@@ -24,15 +29,26 @@ public class Hyperwarp : MonoBehaviour {
             if (transform.localScale.z < 10 && maincamera.fieldOfView < 160)
             {
                 GetComponent<AudioSource>().enabled = true;
-                transform.localScale += new Vector3(0, 0, 0.1f);
-                maincamera.fieldOfView += 2;
+                transform.localScale += new Vector3(0, 0, 0.05f);
+                maincamera.fieldOfView += 0.5f;
             }
             else
             {
                 transform.position += transform.forward * 100;
+                fading = true;
             }
         }
 
+        if(fading)
+        {
+            fade.GetComponent<CanvasGroup>().alpha += 0.002f;
+        }
 
-	}
+        if (fade.GetComponent<CanvasGroup>().alpha == 1)
+        {
+            SceneManager.LoadScene("Menu");
+        }
+
+
+    }
 }
