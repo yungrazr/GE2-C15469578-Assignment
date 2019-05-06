@@ -9,12 +9,17 @@ A simulation of a Star Trek story made with Unity Engine.  The USS Enterprise em
 ### Features
  - Various scenes with cool skyboxes, action and camera movement
  - Starship enterprise and enemy movements utilise steering behaviours such as seek, arrive, and pursue
- -  Space battle scene with lasers and enemy explosions
+ - Space battle scene with lasers and enemy explosions
  - Asteroid field chase scene with obstacle evasion until all enemies are destroyed
  - Smooth transitions between scenes
  - Music and sound effects
  - Voice acting to compliment story
  - Post processing to give the simulation a cinematic look
+ - Great 3D models
+ 
+ ### Favourite aspect
+Favourite part is the chase in the asteroid field in Scene 6 where starship enterprise uses obstacle avoidance to dodge asteroid while being chased by enemies which crash into the asteroids.
+The hyperwarp in Scene 7 is also cool, made by scaling the model in the z axis and increasing the FOV on the camera to make it seem like its warping through space.
 
 ### Screenshots
 ![Scene1](https://github.com/yungrazr/GE2-C15469578-Assignment/blob/master/Image/Screenshot_1.png)
